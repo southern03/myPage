@@ -1,0 +1,25 @@
+@import url('./main.css');
+main { display:grid; place-items:center; min-height: calc(100vh - 120px); }
+.form-card { width: 100%; max-width: 720px; background: var(--card); border:1px solid var(--border); border-radius: 16px; padding: 24px; }
+h1 { margin-top:0; }
+fieldset { border:1px dashed var(--border); border-radius: 12px; padding: 16px; margin-top: 16px; }
+legend { color: var(--muted); padding: 0 8px; }
+label { display:block; margin-top: 12px; margin-bottom: 6px; color: var(--muted); }
+.hint { font-weight: 400; color: var(--muted); margin-left: 6px; }
+input { width: 100%; padding: 12px; border-radius: 10px; border:1px solid var(--border); background:#0f162c; color: var(--text); }
+.inline { display:flex; gap: 8px; align-items:center; }
+.row { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 640px){ .row { grid-template-columns: 1fr; } }
+.password-wrap { position: relative; }
+.password-wrap .eye { position:absolute; right:8px; top:50%; transform: translateY(-50%); border:none; background:transparent; cursor:pointer; color:var(--muted); }
+.password-wrap .eye svg { width:22px; height:22px; fill: currentColor; }
+.msg { min-height: 18px; font-size: 12px; margin: 6px 2px 0; }
+.msg.ok { color: var(--ok); }
+.msg.err { color: var(--err); }
+.btn { padding: 10px 16px; border-radius: 10px; border:1px solid var(--border); background: #0f162c; color: var(--text); cursor:pointer; }
+.btn.primary { width: 100%; margin-top: 16px; background: var(--primary); border-color: transparent; color: #0b1020; font-weight: 700; }
+.btn.ghost { background: transparent; }
+.agree { margin-top: 8px; }
+.check { display:flex; gap:10px; align-items:center; margin: 8px 0; }
+hr { border:0; border-top:1px solid var(--border); margin: 8px 0; }
+.helper { text-align:center; color: var(--muted); margin-top: 12px; }

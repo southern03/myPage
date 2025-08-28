@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>회원가입</title>
+  <link rel="stylesheet" href="../css/signup.css" />
+  <!-- 카카오(다음) 우편번호 API -->
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="brand" href="./main.html">MyPage</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-card" aria-labelledby="signupTitle">
+      <h1 id="signupTitle">회원가입</h1>
+
+      <form id="signupForm" novalidate>
+        <fieldset>
+          <legend>계정 정보</legend>
+
+          <label for="email">이메일(아이디)</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          <p class="msg" id="emailMsg"></p>
+
+          <label for="password">비밀번호
+            <small class="hint">영문+숫자+특수문자 1개 이상 포함, 8자 이상</small>
+          </label>
+          <div class="password-wrap">
+            <input type="password" id="password" name="password" placeholder="••••••••" required />
+            <button type="button" class="eye" aria-label="비밀번호 보기 전환" data-target="password">
+              <!-- eye icon (SVG) -->
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12a5 5 0 110-10 5 5 0 010 10z"/></svg>
+            </button>
+          </div>
+          <p class="msg" id="passwordMsg"></p>
+
+          <label for="password2">비밀번호 확인</label>
+          <div class="password-wrap">
+            <input type="password" id="password2" name="password2" placeholder="••••••••" required />
+            <button type="button" class="eye" aria-label="비밀번호 확인 보기 전환" data-target="password2">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12a5 5 0 110-10 5 5 0 010 10z"/></svg>
+            </button>
+          </div>
+          <p class="msg" id="password2Msg"></p>
+        </fieldset>
+
+        <fieldset>
+          <legend>개인 정보</legend>
+
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" placeholder="홍길동" required />
+          <p class="msg" id="nameMsg"></p>
+
+          <div class="row">
+            <div class="col">
+              <label for="nickname">닉네임</label>
+              <div class="inline">
+                <input type="text" id="nickname" name="nickname" placeholder="별명" required />
+                <button type="button" class="btn ghost" id="checkNicknameBtn">중복 확인</button>
+              </div>
+              <p class="msg" id="nicknameMsg"></p>
+            </div>
+            <div class="col">
+              <label for="phone">핸드폰번호</label>
+              <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" inputmode="numeric" required />
+              <p class="msg" id="phoneMsg"></p>
+            </div>
+          </div>
+
+          <label for="postcode">주소</label>
+          <div class="inline">
+            <input type="text" id="postcode" name="postcode" placeholder="우편번호" readonly required />
+            <button type="button" class="btn" id="findAddrBtn">주소검색</button>
+          </div>
+          <input type="text" id="roadAddress" name="roadAddress" placeholder="도로명 주소" readonly required />
+          <input type="text" id="detailAddress" name="detailAddress" placeholder="상세 주소" />
+          <p class="msg" id="addressMsg"></p>
+        </fieldset>
+
+        <fieldset>
+          <legend>약관 동의</legend>
+          <div class="agree">
+            <label class="check">
+              <input type="checkbox" id="agreeAll" />
+              <span>전체 동의</span>
+            </label>
+            <hr />
+            <label class="check">
+              <input type="checkbox" class="agree-required" id="agreeService" />
+              <span>(필수) 서비스 이용약관 동의</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" class="agree-required" id="agreePrivacy" />
+              <span>(필수) 개인정보 처리방침 동의</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" class="agree-optional" id="agreeMarketing" />
+              <span>(선택) 마케팅 수신 동의</span>
+            </label>
+            <p class="msg" id="agreeMsg"></p>
+          </div>
+        </fieldset>
+
+        <button class="btn primary" type="submit">가입하기</button>
+        <p class="helper">이미 계정이 있으신가요? <a href="./login.html">로그인</a></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 MyPage Demo</small>
+  </footer>
+
+  <script src="../js/signup.js"></script>
+</body>
+</html>

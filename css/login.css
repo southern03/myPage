@@ -1,0 +1,14 @@
+@import url('./main.css');
+main { display:grid; place-items:center; min-height: calc(100vh - 120px); }
+.form-card { width: 100%; max-width: 420px; background: var(--card); border:1px solid var(--border); border-radius: 16px; padding: 24px; }
+h1 { margin-top:0; }
+label { display:block; margin-top: 12px; margin-bottom: 6px; color: var(--muted); }
+input { width: 100%; padding: 12px; border-radius: 10px; border:1px solid var(--border); background:#0f162c; color: var(--text); }
+.password-wrap { position: relative; }
+.msg { min-height: 18px; font-size: 12px; margin: 6px 2px 0; }
+.msg.ok { color: var(--ok); }
+.msg.err { color: var(--err); }
+.btn { width:100%; margin-top: 16px; }
+.helper { margin-top: 8px; color: var(--muted); text-align:center; }
+.password-wrap .eye { position:absolute; right:8px; top:50%; transform: translateY(-50%); border:none; background:transparent; cursor:pointer; color:var(--muted); }
+.password-wrap .eye svg { width:22px; height:22px; fill: currentColor; }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>로그인</title>
+  <link rel="stylesheet" href="../css/login.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="brand" href="./main.html">MyPage</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-card" aria-labelledby="loginTitle">
+      <h1 id="loginTitle">로그인</h1>
+
+      <form id="loginForm" novalidate>
+        <fieldset>
+          <legend class="sr-only">로그인 정보</legend>
+
+          <label for="email">이메일</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          <p class="msg" id="emailMsg"></p>
+
+          <label for="password">비밀번호</label>
+          <div class="password-wrap">
+            <input type="password" id="password" name="password" placeholder="••••••••" required />
+          </div>
+          <p class="msg" id="passwordMsg"></p>
+        </fieldset>
+
+        <button type="submit" class="btn primary">로그인</button>
+        <p class="helper">
+          계정이 없으신가요? <a href="./signup.html">회원가입</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 MyPage Demo</small>
+  </footer>
+
+  <script src="../js/login.js"></script>
+</body>
+</html>
